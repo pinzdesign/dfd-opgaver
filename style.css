@@ -1,21 +1,28 @@
 .card {
-    padding: 1rem;
+    --padding: 1rem;
+    padding: var(--padding);
 
     .content>*+* {
         margin-top: .25rlh;
     }
 }
 
+.card:not(:has(h3, img)) p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
 
+.card:not(:has(img)) h3 {
+    font-size: 1.6rem;
+}
 
+.card:has(img) {
+    padding: 0;
+}
 
-
-
-
-
-
-
-
+.card:has(img) .content {
+    padding: var(--padding);
+}
 
 
 
